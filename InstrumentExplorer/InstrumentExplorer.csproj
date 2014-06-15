@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{25BDCC18-E106-4211-9051-93EE40DBC571}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InstrumentExplorer</RootNamespace>
+    <AssemblyName>InstrumentExplorer</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>InstrumentExplorer_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>InstrumentExplorer.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\RateThisAppCommand.cs" />
+    <Compile Include="Commands\SendAnEmailCommand.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPivotPage.xaml.cs">
+      <DependentUpon>MainPivotPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="VideoPlayer.xaml.cs">
+      <DependentUpon>VideoPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VideoSearch.xaml.cs">
+      <DependentUpon>VideoSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ArtistViewModel.cs" />
+    <Compile Include="ViewModels\CommandSampleViewModel.cs" />
+    <Compile Include="ViewModels\InstrumentViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\YouTubeVideo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\appbar.map.png" />
+    <Content Include="Assets\appbar.music.png" />
+    <Content Include="Assets\appbar.sort.alphabetical.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\12-string-guitar.png" />
+    <Content Include="Images\accordion.png" />
+    <Content Include="Images\autoharp.png" />
+    <Content Include="Images\bagpipes.png" />
+    <Content Include="Images\Balafon.png" />
+    <Content Include="Images\balalaika.png" />
+    <Content Include="Images\banjo.png" />
+    <Content Include="Images\bassjo.png" />
+    <Content Include="Images\Bassoon.png" />
+    <Content Include="Images\bass_guitar.png" />
+    <Content Include="Images\bodhran.png" />
+    <Content Include="Images\Bongos.png" />
+    <Content Include="Images\bouzouki.png" />
+    <Content Include="Images\cajon.png" />
+    <Content Include="Images\castanets.png" />
+    <Content Include="Images\charango.png" />
+    <Content Include="Images\clarinet.png" />
+    <Content Include="Images\clavichord.png" />
+    <Content Include="Images\CompanyLogo.png" />
+    <Content Include="Images\conga.png" />
+    <Content Include="Images\contrabassflute.png" />
+    <Content Include="Images\Contrabassoon.png" />
+    <Content Include="Images\cornet.png" />
+    <Content Include="Images\cowbell.png" />
+    <Content Include="Images\cymbal.png" />
+    <Content Include="Images\djembe.png" />
+    <Content Include="Images\doublebass.png" />
+    <Content Include="Images\drumset.png" />
+    <Content Include="Images\dulcian.png" />
+    <Content Include="Images\dulcimer.png" />
+    <Content Include="Images\dynamophone.png" />
+    <Content Include="Images\esraj.png" />
+    <Content Include="Images\euphonium.png" />
+    <Content Include="Images\fiddle.png" />
+    <Content Include="Images\flute.png" />
+    <Content Include="Images\glockenspiel.png" />
+    <Content Include="Images\gong.png" />
+    <Content Include="Images\guiro.png" />
+    <Content Include="Images\Hang.png" />
+    <Content Include="Images\hardingfele.png" />
+    <Content Include="Images\harmonica.png" />
+    <Content Include="Images\Harmonium.png" />
+    <Content Include="Images\harp.png" />
+    <Content Include="Images\harpsichord.png" />
+    <Content Include="Images\horn.png" />
+    <Content Include="Images\HurdyGurdy.png" />
+    <Content Include="Images\igil.png" />
+    <Content Include="Images\kalimba.png" />
+    <Content Include="Images\kantele.png" />
+    <Content Include="Images\kazoo.png" />
+    <Content Include="Images\keyboard.png" />
+    <Content Include="Images\lute.png" />
+    <Content Include="Images\lyre.png" />
+    <Content Include="Images\mandolin.png" />
+    <Content Include="Images\maracas.png" />
+    <Content Include="Images\Marimba.png" />
+    <Content Include="Images\marxophone.png" />
+    <Content Include="Images\metallophone.png" />
+    <Content Include="Images\oboe.png" />
+    <Content Include="Images\ocarina.png" />
+    <Content Include="Images\omnichord.png" />
+    <Content Include="Images\ondes.png" />
+    <Content Include="Images\organ.png" />
+    <Content Include="Images\orpharion.png" />
+    <Content Include="Images\otomatone.png" />
+    <Content Include="Images\piano.png" />
+    <Content Include="Images\piccolo.png" />
+    <Content Include="Images\recorder.png" />
+    <Content Include="Images\Rhodes.png" />
+    <Content Include="Images\saxophone.png" />
+    <Content Include="Images\serpent.png" />
+    <Content Include="Images\shamisen.png" />
+    <Content Include="Images\shawm.png" />
+    <Content Include="Images\Sitar.png" />
+    <Content Include="Images\snaredrum.png" />
+    <Content Include="Images\sousaphone.png" />
+    <Content Include="Images\steeldrum.png" />
+    <Content Include="Images\stylophone.png" />
+    <Content Include="Images\synthesizer.png" />
+    <Content Include="Images\tabla.png" />
+    <Content Include="Images\tambourine.png" />
+    <Content Include="Images\tb303.png" />
+    <Content Include="Images\templeblocks.png" />
+    <Content Include="Images\theremin.png" />
+    <Content Include="Images\timbales.png" />
+    <Content Include="Images\tinwhistle.png" />
+    <Content Include="Images\tomtom.png" />
+    <Content Include="Images\trautonium.png" />
+    <Content Include="Images\treble.png" />
+    <Content Include="Images\triangle.png" />
+    <Content Include="Images\trombone.png" />
+    <Content Include="Images\trumpet.png" />
+    <Content Include="Images\Tuba.png" />
+    <Content Include="Images\Ukelele.png" />
+    <Content Include="Images\vibraphone.png" />
+    <Content Include="Images\vibraphone2.png" />
+    <Content Include="Images\viola.png" />
+    <Content Include="Images\violin.png" />
+    <Content Include="Images\violoncello.png" />
+    <Content Include="Images\wheelharp.png" />
+    <Content Include="Images\woodBlock.png" />
+    <Content Include="Images\xylophone.png" />
+    <Content Include="Images\zither.png" />
+    <Content Include="README_FIRST.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Advertising.Mobile, Version=6.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="microsoft.advertising.mobile.ui, Version=6.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.16\lib\wp8\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.16\lib\wp8\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Phone">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.16\lib\wp8\Microsoft.Threading.Tasks.Extensions.Phone.dll</HintPath>
+    </Reference>
+    <Reference Include="MyToolkit">
+      <HintPath>..\packages\MyToolkit.2.0.10.0\lib\portable-win+net40+sl40+wp71\MyToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MyToolkit.Extended">
+      <HintPath>..\packages\MyToolkit.Extended.2.0.10.0\lib\wp80\MyToolkit.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="telerik.windows.controls.data, Version=2013.3.1016.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Primitives, Version=2013.3.1016.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\RadControls for Windows Phone 8 Q3 2013\Binaries\WindowsPhone\Telerik.Windows.Controls.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Core, Version=2013.3.1016.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\RadControls for Windows Phone 8 Q3 2013\Binaries\WindowsPhone\Telerik.Windows.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data, Version=2013.3.1016.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="About.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPivotPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VideoPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VideoSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.PlayerFramework.WP8.Core, Version=1.8.2.2">
+      <Name>Microsoft Player Framework</Name>
+    </SDKReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
